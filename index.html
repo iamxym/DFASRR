@@ -1,1 +1,397 @@
-<h1>Hello World</h1>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Moer Renderer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		.links {
+			display: flex;
+			justify-content: space-between;
+			margin: 20px 0;
+			/* 调整上下边距和左右边距 */
+		}
+
+		.link {
+			text-align: center;
+			outline: none;
+			/* 移除链接的默认外观 */
+		}
+
+		.link img {
+			width: 100px;
+			/* 设置图像宽度 */
+			height: 100px;
+			/* 设置图像高度 */
+			display: block;
+			margin: 0 auto 5px;
+			/* 图像居中并留出一些下边距 */
+		}
+
+		/* 添加焦点样式 */
+		.link:focus {
+			border: 2px solid #007bff;
+			/* 可自定义焦点样式 */
+			border-radius: 4px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="gtco-loader"></div>
+
+	<div id="page">
+
+
+		<div class="page-inner">
+			<nav class="gtco-nav" role="navigation">
+				<div class="gtco-container">
+
+					<div class="row">
+						<div class="col-sm-4 col-xs-12">
+							<div id="gtco-logo"><a href="index.html">Meta Graphics & 3D Vision Lab
+									</a></div>
+						</div>
+						<div class="col-xs-8 text-right menu-1">
+							<ul>
+								<li><a href="http://www.njumeta.com/"><b>NJU Meta</b></a></li>
+							</ul>
+						</div>
+					</div>
+
+
+
+				</div>
+			</nav>
+
+			<header id="gtco-header" class="gtco-cover" role="banner"
+				style="background-image: url(images/backgound.jpg)">
+				<div class="overlay"></div>
+
+			</header>
+
+			<!-- teaser -->
+			<!-- <div class="gtco-section">
+
+				<div class="row">
+
+					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+						<h2>Teaser</h2>
+					</div>
+				</div>
+				<div class="image-center gtco-heading">
+					<head>
+						<title>插入图片示例</title>
+					</head>
+					<body>
+					 
+						<img src="images/teaser.jpg" alt="描述文字"  style="max-width:100%" />
+					 
+					</body>
+				</div>
+			</div> -->
+
+			<div class="gtco-section border-bottom">
+
+				<div class=" text-center gtco-heading" style="width: 70%;margin-left: 15%">
+					<h1><b>Deep Fourier-based Arbitrary-scale Super-resolution for Real-time Rendering</b></h1>
+					<h3>Haonan Zhang<sup>*1</sup>, Jie Guo<sup>*1</sup>, Jiawei Zhang<sup>1</sup>, Haoyu Qin<sup>1</sup>, Zesen Feng<sup>1</sup>, Ming Yang<sup>1</sup>, Yanwen Guo<sup>†1</sup></h3>
+					<h4><sup>1</sup>State Key Lab for Novel Software Technology, Nanjing University<br><sup>*</sup>Joint first authors<br><sup>†</sup>Corresponding author</h4>
+				</div>
+				<!-- <div class="row">
+
+					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+						<h2>Teaser</h2>
+					</div>
+				</div> -->
+				<div class="image-center gtco-heading">
+					<body>
+					 
+						<img src="images/teaser.jpg" alt="teaser"  style="max-width:80%;margin-left: 10%" />
+					 
+					</body>
+				</div>
+				<div class=" text-left gtco-heading" style="width: 80%;margin-left: 10%">	
+					<p><b>Abstract</b></p>
+					<p>As a prevailing tool for effectively reducing rendering costs in many graphical applications, 
+						frame super-resolution has seen important progress in recent years. 
+						However, most of prior works designed for rendering contents face a common limitation: 
+						once a model is trained, it can only afford a single fixed scale. 
+						In this paper, we attempt to eliminate this limitation by supporting arbitrary-scale super-resolution for a trained neural model. 
+						The key is a Fourier-based implicit neural representation which maps arbitrary and naturally coordinates in the high-resolution spatial domain to valid pixel values. 
+						By observing that high-resolution G-buffers possess similar spectrum to high-resolution rendered frames,
+						 we design a High-Frequency Fourier Mapping (HFFM) module to recover fine details from low-resolution inputs, without introducing noticeable artifacts. 
+						 A Low-Frequency Residual Learning (LFRL) strategy is adopted to preserve low-frequency structures and ensure low biasedness caused by network inference.
+						  Moreover, different rendering contents are well separated by our spatial-temporal masks derived from G-buffers and motion vectors. 
+						  Several light-weight designs to the neural network guarantee the real-time performance on a wide range of scenes.</p>
+
+					<!-- <p><b>Moer</b> also has an educational version: <a href="https://github.com/NJUCG/Moer-lite"><b>Moer-lite</b></a>, accompanied with several assignments  -->
+						<!-- (<a href="images/lab0.pdf">Assignment 0,&nbsp   </a><a href="images/lab1.pdf">Assignment 1, &nbsp </a> <a href="images/lab2.pdf">Assignment 2, &nbsp</a><a href="images/final.pdf">Final Assignment</a>...).</p> -->
+				</div>
+
+				<br></br>
+
+				<div class="links position-relative z-1" style="width: 66.7%;margin-left: 16.7%">
+					<a href="https://github.com/iamxym/Deep-Fourier-based-Arbitrary-scale-Super-resolution-for-Real-time-Rendering" class="link">
+						<img src="images/代码.svg" alt="Code">
+						<span><b>Code</b></span>
+					</a>
+
+					<a href="https://drive.google.com/file/d/1nylux3Wg1wJYSfT4Moi47_oIY_n2EfDa/view?usp=drive_link" class="link">
+						<img src="images/文档.svg" alt="Paper">
+						<span><b>Paper</b></span>
+					</a>
+
+					<a href="images/supplement.pdf" class="link">
+						<img src="images/文档.svg" alt="Supplementary">
+						<span><b>Supplementary</b></span>
+					</a>
+
+					<a href="https://drive.google.com/file/d/1yblm9_d7xz3ZD031_KboRlyyxsBwnlJI/view?usp=drive_link" class="link">
+						<img src="images/视频.svg" alt="Video">
+						<span><b>Video</b></span>
+					</a>
+				</div>
+				<br></br>
+				<div class="text-left gtco-heading image-center gtco-heading"style="width: 80%;margin-left: 10%">
+					<p><b>Network Architecture</b></p>
+					<body>
+					 
+						<img src="images/network.svg" alt="network"  style="max-width:100%" />
+					 
+					</body>
+				</div>
+				<br></br>
+				<div class="text-left gtco-heading image-center gtco-heading"style="width: 80%;margin-left: 10%">
+					<p><b>Runtime Comparison</b></p>
+					<body>
+					 
+						<img src="images/runtime_2.svg" alt="runtime"  style="max-width:100%" />
+					 
+					</body>
+				</div>
+				<!-- <div class=" text-left gtco-heading" style="width: 80%;margin-left: 10%">	
+					<p><b>Citation</b></p>
+					<p></p>
+
+				</div> -->
+
+				<br></br>
+				<div class="gtco-heading" style="width: 80%;margin-left: 10%">
+
+					<p><b>Results</b></p>
+					<div class="row fh5co-project-item">
+						<div class="col-lg-4 col-md-4 col-sm-6 ">
+							<a href="images/BK/ours-bk_3-160.png" class=" image-popup">
+								<figure class="image-popup">
+									<div class="overlay"><i class="ti-plus"></i></div>
+									<img src="images/BK/ours-bk_3-160.png" alt="Image" class="img-responsive">
+								</figure>
+							</a>
+							<div class="fh5co-text">
+								<a href="images/BK.zip" download style="display: inline-block;" >
+									<span style="  color:  #3498db; ">Bunker &nbsp;  </span>
+									<img src="images/下载.svg" alt="Download" style="width: 20px; height: 20px;">
+								</a>
+							</div>
+	
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 ">
+							<a href="images/MD/ours_180.png" class=" image-popup">
+								<figure class="image-popup">
+									<div class="overlay"><i class="ti-plus"></i></div>
+									<img src="images/MD/ours_180.png" alt="Image" class="img-responsive">
+								</figure>
+							</a>
+							<div class="fh5co-text">
+								<a href="images/MD.zip" download style="display: inline-block;" >
+									<span style="  color:  #3498db; ">MedievalDocks &nbsp;  </span>
+									<img src="images/下载.svg" alt="Download" style="width: 20px; height: 20px;">
+								</a>
+							</div>
+	
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 ">
+							<a href="images/RF/ours_1230.png" class=" image-popup">
+								<figure class="image-popup">
+									<div class="overlay"><i class="ti-plus"></i></div>
+									<img src="images/RF/ours_1230.png" alt="Image" class="img-responsive">
+								</figure>
+							</a>
+							<div class="fh5co-text">
+								<a href="images/RF.zip" download style="display: inline-block;" >
+									<span style="  color:  #3498db; ">RedwoodForest &nbsp;  </span>
+									<img src="images/下载.svg" alt="Download" style="width: 20px; height: 20px;">
+								</a>
+							</div>
+	
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 ">
+							<a href="images/EV/ours_368.png" class=" image-popup">
+								<figure class="image-popup">
+									<div class="overlay"><i class="ti-plus"></i></div>
+									<img src="images/EV/ours_368.png" alt="Image" class="img-responsive">
+								</figure>
+							</a>
+							<div class="fh5co-text">
+								<a href="images/EV.zip" download style="display: inline-block;" >
+									<span style="  color:  #3498db; ">EasternVillage &nbsp;  </span>
+									<img src="images/下载.svg" alt="Download" style="width: 20px; height: 20px;">
+								</a>
+							</div>
+	
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 ">
+							<a href="images/WT/ours_210.png" class=" image-popup">
+								<figure class="image-popup">
+									<div class="overlay"><i class="ti-plus"></i></div>
+									<img src="images/WT/ours_210.png" alt="Image" class="img-responsive">
+								</figure>
+							</a>
+							<div class="fh5co-text">
+								<a href="images/WT.zip" download style="display: inline-block;" >
+									<span style="  color:  #3498db; ">WesternTown &nbsp;  </span>
+									<img src="images/下载.svg" alt="Download" style="width: 20px; height: 20px;">
+								</a>
+							</div>
+	
+						</div>
+
+
+	
+	
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<footer id="gtco-footer" role="contentinfo">
+			<div class="gtco-container">
+				<div class="row row-p	b-md">
+
+
+
+
+
+					<div>
+						<div class="">
+							<div style="font-size: 20px">
+								<!--								<span >Get In Touch</span>-->
+								<a href="mailto:moernju@gmail.com" style="left: 45%;position: relative"><i
+										class="icon-mail2"></i> Connect</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row copyright">
+					<div class="col-md-12 " style="margin-left: 34%">
+						<p class="pull-left">
+							<small class="block">Copyright &copy; 2024.NJUMETA All rights reserved.</small>
+						</p>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+
+
+	</div>
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+
+
+
+	<script>
+		// 给 <figure> 元素添加点击事件监听器
+		document.querySelector('.image-popup').addEventListener('click', function() {
+			$.magnificPopup.open({
+				items: {
+					src: 'images/results/bathroom.jpg'
+				},
+				type: 'image'
+				// 其他 Magnific Popup 配置项
+			});
+		});
+
+		// 阻止点击 <figure> 时触发 <a> 链接的默认行为
+		document.querySelector('.image-popup a').addEventListener('click', function(event) {
+			event.stopPropagation();
+		});
+	</script>
+
+</body>
+
+</html>
